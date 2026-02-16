@@ -11,26 +11,24 @@ export default class LockIcon extends Component {
   @service toasts;
 
   get composerDisabledSubmit() {
+    // eslint-disable-next-line no-console
+    console.log(this.composer.disableSubmit);
     return this.composer.disableSubmit;
   }
 
   @action
   toggleComposerLocked() {
     if (this.composerDisabledSubmit) {
-      this.composer._disableSubmit = false;
+      this.composer.disableSubmit = false;
       this.toasts.success({
         duration: "short",
-        data: {
-          message: i18n("composer_unlocked")
-        }
+        data: { message: i18n("composer_unlocked") }
       });
     } else {
-      this.composer._disableSubmit = true;
+      this.composer.disableSubmit = true;
       this.toasts.success({
         duration: "short",
-        data: {
-          message: i18n("composer_locked")
-        }
+        data: { message: i18n("composer_locked") }
       });
     }
   }
