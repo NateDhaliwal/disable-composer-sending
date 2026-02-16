@@ -26,6 +26,7 @@ export default class LockIcon extends Component {
       this.composer.disableSubmit = true;
       this.toasts.success({
         duration: "short",
+        // eslint-disable-next-line no-undef
         data: { message: I18n.t(themePrefix("composer_locked_message")) }
       });
     }
