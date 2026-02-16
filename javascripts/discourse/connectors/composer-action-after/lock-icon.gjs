@@ -20,13 +20,13 @@ export default class LockIcon extends Component {
       this.composer.disableSubmit = false;
       this.toasts.success({
         duration: "short",
-        data: { message: i18n("composer_unlocked") }
+        data: { message: i18n("composer_unlocked_message") }
       });
     } else {
       this.composer.disableSubmit = true;
       this.toasts.success({
         duration: "short",
-        data: { message: i18n("composer_locked") }
+        data: { message: i18n("composer_locked_message") }
       });
     }
   }
