@@ -17,7 +17,7 @@ export default class LockIcon extends Component {
   @action
   toggleComposerLocked() {
     if (this.composerDisabledSubmit) {
-      this.composer.disableSubmit(false);
+      this.composer._disableSubmit = false;
       this.toasts.success({
         duration: "short",
         data: {
@@ -25,7 +25,7 @@ export default class LockIcon extends Component {
         }
       });
     } else {
-      this.composer.disableSubmit(true);
+      this.composer._disableSubmit = true;
       this.toasts.success({
         duration: "short",
         data: {
